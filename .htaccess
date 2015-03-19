@@ -1,0 +1,42 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	
+	# Main Basic Pages #
+	RewriteRule ^index$ index.php
+ 	RewriteRule ^login$ index.php?page=login 
+	RewriteRule ^logout$ index.php?page=logout 
+	RewriteRule ^register$ index.php?page=register 
+	RewriteRule ^resend-activation$ index.php?page=resend_activation 
+	RewriteRule ^submit$ index.php?page=submit
+	RewriteRule ^lost-password$ index.php?page=lost_password 
+	RewriteRule ^reset-password/([^/]*)/([^/]*)$ index.php?page=reset_password&email=$1&lost_password_code=$2 
+	RewriteRule ^activate/([^/]*)/([^/]*)$ index.php?page=activate&email=$1&activation_code=$2
+	RewriteRule ^not-found$ index.php?page=not_found
+	RewriteRule ^search$ index.php?page=search
+
+	RewriteRule ^contact$ index.php?page=contact
+	RewriteRule ^privacy-policy$ index.php?page=privacy_policy
+	RewriteRule ^disclaimer$ index.php?page=disclaimer
+	RewriteRule ^api-documentation$ index.php?page=api_documentation
+
+	RewriteRule ^settings/design$ index.php?page=design_settings
+	RewriteRule ^settings/password$ index.php?page=change_password 
+	RewriteRule ^settings/profile$ index.php?page=profile_settings 
+ 
+
+ 	# Admin Pages #
+	RewriteRule ^admin/users-management$ index.php?page=admin_users_management 
+	RewriteRule ^admin/users-management/status/([^/]*)$ index.php?page=admin_users_management&status=$1
+	RewriteRule ^admin/users-management/delete/([^/]*)$ index.php?page=admin_users_management&delete=$1
+	RewriteRule ^admin/edit-user/([^/]*)$ index.php?page=admin_user_edit&user_id=$1 
+
+	RewriteRule ^admin/website-settings$ index.php?page=admin_website_settings
+
+	RewriteRule ^admin/website-statistics$ index.php?page=admin_website_statistics
+
+
+	# Complex Pages #
+
+</IfModule>

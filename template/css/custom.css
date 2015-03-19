@@ -1,0 +1,37 @@
+/* Overriding Materialize Css */
+.dropdown-content {
+	max-height: 100%;
+}
+.collection.with-header .collection-header {
+	padding: 0px 20px;
+}
+
+
+/* Modifications for sticky footer */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin-bottom: 250px;
+}
+.page-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+
+/* Custom */
+.weather-temperature {
+	font-size: 80px;
+	font-weight: lighter;
+}
+
+.row .no-margin {
+	margin-bottom: 0px;
+}
+
+.pointer:hover {
+	cursor: pointer;
+}
